@@ -111,10 +111,10 @@ function Canvas2() {
     return (
         <div>
             <div className='row justify-content-center mt-2'>                
-                <h3 className='col-2 text-white'>Change Rain</h3>
-                <input ref={sliderRef} type="range" class="custom-range col-2 mt-2 mr-5" min="0" max="5" step="0.1"></input>   
-                <button ref={sliderBut} className='btn btn-danger mr-2 ml-5'>Go Crazy</button>
-                <input ref={sliderIn} type='number' placeholder='Pick Number'></input>
+                <h3 className='col-4 col-md-4 col-lg-2 text-white'>Change Rain</h3>
+                <input ref={sliderRef} type="range" class="custom-range col-4 col-md-4 col-lg-2 mt-2 mr-5" min="0" max="5" step="0.1"></input>   
+                <button ref={sliderBut} className='btn btn-danger col-md-4 col-4 col-lg-2 mr-2 ml-5'>Go Crazy</button>
+                <input ref={sliderIn} type='number' placeholder='Pick Number' className='col-4 col-md-4 col-lg-2'></input>
             </div>
             <canvas id="myCanvas2" className='mt-4' style={canvasStyle}>sdsd</canvas>       
               
