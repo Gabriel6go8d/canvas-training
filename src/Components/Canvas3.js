@@ -10,7 +10,7 @@ function Canvas3() {
         let MyHeight = window.innerHeight*0.8
         let MyWidth = window.innerWidth*0.8
 
-        var canvas = document.getElementById('myCanvas')        
+        var canvas = document.getElementById('myCanvas3')        
         canvas.height = MyHeight
         canvas.width = MyWidth
         var c = canvas.getContext('2d') 
@@ -116,7 +116,7 @@ function Canvas3() {
 
     return (
         <div className='col'>
-            <canvas id="myCanvas" className='mt-4' style={canvasStyle}>sdsd</canvas>            
+            <canvas id="myCanvas3" className='mt-4' style={canvasStyle}>sdsd</canvas>            
         </div>
     )
 }

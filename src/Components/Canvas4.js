@@ -1,6 +1,6 @@
 import React, {useEffect}  from 'react'
 
-function Canvas() {
+function Canvas4() {
 
     const canvasStyle = {
         backgroundColor: '#f3f6f4',
@@ -22,14 +22,13 @@ function Canvas() {
 
 
     var fillC = true
-    var MaxRadious = 50
     
 
     useEffect(() => {
         let MyHeight = window.innerHeight*0.8
         let MyWidth = window.innerWidth*0.8
 
-        var canvas = document.getElementById('myCanvas')        
+        var canvas = document.getElementById('myCanvas4')        
         canvas.height = MyHeight
         canvas.width = MyWidth
         var c = canvas.getContext('2d')        
@@ -75,13 +74,20 @@ function Canvas() {
                 }
                 this.x += this.dx
                 this.y += this.dy 
+
                 let dimAll = canvas.getBoundingClientRect()
-                if(mouse.x-dimAll.x - this.x < 50 && mouse.x-dimAll.x - this.x > -50 && mouse.y-dimAll.y - this.y < 50 && mouse.y-dimAll.y - this.y > -50 && this.radious < MaxRadious) {
-                    this.radious += 1
-                }else if (this.radious > this.minRadious){
-                    this.radious -= 1                }
-
-
+                if(mouse.x-dimAll.x - this.x < 100 && mouse.x-dimAll.x - this.x > -100 && mouse.y-dimAll.y - this.y < 100 && mouse.y-dimAll.y - this.y > -100) {
+                    if(this.x - (mouse.x - dimAll.x) < 0){
+                        this.x -= 2
+                    }else{
+                        this.x += 2
+                    }
+                    if(this.y - (mouse.y - dimAll.y) < 0){
+                        this.y -= 2
+                    }else{
+                        this.y += 2
+                    }
+                }
                 this.drawCircle()
             }
         }          
@@ -104,7 +110,7 @@ function Canvas() {
         }   
 
         init()        
-        var interval = setInterval(()=>{            
+        var interval4 = setInterval(()=>{            
             c.clearRect(0,0,MyWidth,MyHeight)
             for (var i = 0; i < arrayCircle.length-1; i++){
                 arrayCircle[i].Update()
@@ -112,8 +118,8 @@ function Canvas() {
         },16)
 
         return (() => {
-            clearInterval(interval)
-            interval = 0
+            clearInterval(interval4)
+            interval4 = 0
         })
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
@@ -124,10 +130,10 @@ function Canvas() {
             <div className='row justify-content-center'>
                 <button className='btn btn-success mt-1' onClick={()=>fillC=!fillC} >Fill or Not</button>
             </div>
-            <canvas id="myCanvas" className='mt-1' style={canvasStyle}>sdsd</canvas>
+            <canvas id="myCanvas4" className='mt-1' style={canvasStyle}>sdsd</canvas>
             
         </div>
     )
 }
 
-export default Canvas
+export default Canvas4
