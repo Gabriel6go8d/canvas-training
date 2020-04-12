@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import './App.css';
 import Canvas4 from './Components/Canvas4';
 import Canvas from './Components/Canvas';
-// import Canvas3 from './Components/Canvas3';
-// import Canvas2 from './Components/Canvas2';
+import Canvas3 from './Components/Canvas3';
+import Canvas2 from './Components/Canvas2';
 // import Canvas from './Components/Canvas';
 function App() {
   
@@ -15,7 +15,7 @@ function App() {
       {show && <Canvas/>}
       {!show && <Canvas4/>}
       {/* <Canvas /> */}
-      {/* <Canvas2 /> */}
+      <Canvas2 />
       {/* <Canvas3 /> */}
     </div>
   );
