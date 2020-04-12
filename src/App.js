@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import Canvas4 from './Components/Canvas4';
 import Canvas from './Components/Canvas';
-import Canvas3 from './Components/Canvas3';
+// import Canvas3 from './Components/Canvas3';
 import Canvas2 from './Components/Canvas2';
 // import Canvas from './Components/Canvas';
 function App() {
