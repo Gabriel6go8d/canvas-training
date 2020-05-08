@@ -11,3 +11,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.canvasStyle{
+  background-color: #f3f6f4;
+  border: 2px solid black;
+}
+
+.area{
+  transition: all 400ms ease;
+  opacity: 1;
+}
+.areahidde{
+  opacity: 0;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+}
+.App p{
+  margin: 0;
+}
+@media only screen and (max-width: 800px){
+  .footer{
+    position: relative;
+  }
+}
+
+.warning_text{
+  color: yellow;
+  margin-bottom: 0;
+  align-self: end;
+}

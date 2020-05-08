@@ -1,14 +1,26 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useRef} from 'react'
 
-function Canvas3() {
-    const canvasStyle = {
-        backgroundColor: '#f3f6f4',
-        border: '2px solid black'
-    }
+function CanvasRain2() {
+
+    const sliderRef = useRef(null)
+    const sliderBut = useRef(null)
+    const sliderIn = useRef(null)
 
     useEffect(() => {
-        let MyHeight = window.innerHeight*0.8
-        let MyWidth = window.innerWidth*0.8
+
+        var Rain = 100
+
+        sliderRef.current.addEventListener('change', function(e){
+            Rain = e.target.value * 50
+            init()
+        })
+        sliderBut.current.addEventListener('click', function(e){
+            Rain = sliderIn.current.value
+            init()
+        })
+
+        let MyHeight = window.innerHeight*0.6
+        let MyWidth = window.innerWidth*0.7
 
         var canvas = document.getElementById('myCanvas3')        
         canvas.height = MyHeight
@@ -91,7 +103,7 @@ function Canvas3() {
         var arrayStars = []
         const init = () => {
             arrayStars = []
-            for (var i=0; i< 100; i++){
+            for (var i=0; i< Rain; i++){
                 let getV = getValues()
                 arrayStars.push(new Star(getV[0], getV[1], 1, 0, getV[2], 0))
             }
@@ -115,10 +127,17 @@ function Canvas3() {
     }, [])
 
     return (
-        <div className='col'>
-            <canvas id="myCanvas3" className='mt-4' style={canvasStyle}>sdsd</canvas>            
+        <div className='mt-3'>
+            <div className='row m-0 p-0 justify-content-center'>                
+                <h3 className='col-4 col-md-4 col-lg-2 text-white'>Change Rain</h3>
+                <input ref={sliderRef} type="range" className="custom-range col-4 col-md-4 col-lg-2 mt-2 mr-5" min="0" max="5" step="0.1"></input>   
+                <button ref={sliderBut} className='btn btn-danger col-md-4 col-4 col-lg-1 mr-2 ml-5'>Go Crazy</button>
+                <input ref={sliderIn} type='number' placeholder='Pick Number' className='col-4 col-md-4 col-lg-2'></input>
+            </div>
+            <p className='warning_text'>Depending on your PC more than 300 can crash your Page</p>
+            <canvas id="myCanvas3" className='mt-4 canvasStyle'>sdsd</canvas>            
         </div>
     )
 }
 
-export default Canvas3
+export default CanvasRain2

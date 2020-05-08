@@ -1,11 +1,6 @@
 import React, {useEffect}  from 'react'
 
-function Canvas4() {
-
-    const canvasStyle = {
-        backgroundColor: '#f3f6f4',
-        border: '2px solid black'
-    }
+function CanvasRunAway(prop) {
 
     var mouse = {
         x: undefined,
@@ -25,8 +20,8 @@ function Canvas4() {
     
 
     useEffect(() => {
-        let MyHeight = window.innerHeight*0.8
-        let MyWidth = window.innerWidth*0.8
+        let MyHeight = window.innerHeight*0.6
+        let MyWidth = window.innerWidth*0.7
 
         var canvas = document.getElementById('myCanvas4')        
         canvas.height = MyHeight
@@ -126,14 +121,14 @@ function Canvas4() {
     
 
     return (
-        <div className='col mt-2'>
-            <div className='row justify-content-center'>
-                <button className='btn btn-success mt-1' onClick={()=>fillC=!fillC} >Fill or Not</button>
+        <div className='mt-3'>
+            <div className='row m-0 p-0 justify-content-center'>
+                <button className='btn btn-success' onClick={()=>fillC=!fillC} >Fill or Not</button>
             </div>
-            <canvas id="myCanvas4" className='mt-1' style={canvasStyle}>sdsd</canvas>
+            <canvas id="myCanvas4" className='mt-1 canvasStyle'></canvas>
             
         </div>
     )
 }
 
-export default Canvas4
+export default CanvasRunAway
