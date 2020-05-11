@@ -1,4 +1,4 @@
-import React, {useEffect}  from 'react'
+import React, {useEffect, useState}  from 'react'
 
 function CanvasExplote(prop) {
 
@@ -16,11 +16,12 @@ function CanvasExplote(prop) {
     ]
 
     var fillC = true
-    var MaxRadious = 50    
+    var MaxRadious = 50   
+    
+    const [MyHeight, setMyHeight] = useState(window.innerHeight*0.6)
+    const [MyWidth, setMyWidth] = useState(window.innerWidth*0.7)
 
     useEffect(() => {
-        const MyHeight = window.innerHeight*0.6
-        const MyWidth = window.innerWidth*0.7
 
         var canvas = document.getElementById('myCanvas')        
         canvas.height = MyHeight
