@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "16898366cdc8aee5bb379c9cfb6dae90",
+    "revision": "7f8d0642c5c003b14adadf257823a633",
     "url": "/canvas-training/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/canvas-training/static/css/2.de424728.chunk.css"
   },
   {
-    "revision": "5913acb5b8a3d6c41f54",
-    "url": "/canvas-training/static/css/main.3c50fb65.chunk.css"
+    "revision": "60defc100b448f5eeebc",
+    "url": "/canvas-training/static/css/main.984e48d1.chunk.css"
   },
   {
     "revision": "4bf1ee6a9c1d0ee2595d",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/canvas-training/static/js/2.44cab510.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5913acb5b8a3d6c41f54",
-    "url": "/canvas-training/static/js/main.25ab9c6f.chunk.js"
+    "revision": "60defc100b448f5eeebc",
+    "url": "/canvas-training/static/js/main.62e29376.chunk.js"
   },
   {
     "revision": "41749805308420f49ac5",
