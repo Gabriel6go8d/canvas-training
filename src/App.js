@@ -50,6 +50,7 @@ function App() {
       <div className='area' id='area'>
         {toShow}
       </div>
+      <h1>test1</h1>
       <Footer/>
     </div>
   );
