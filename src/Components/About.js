@@ -1,13 +1,46 @@
 import React from 'react'
+import {BsBriefcaseFill} from 'react-icons/bs'
+import {FaCode, FaGithub, FaEnvelope} from 'react-icons/fa'
+import {AiFillHtml5} from 'react-icons/ai'
+import {DiCss3, DiReact, DiBootstrap} from 'react-icons/di'
+
 
 function About() {
     return (
         <div className='container text-left mt-5 about'>
             <h4>Canvas Project</h4>
-            <p>Author: Gabriel Gutierrez</p>
-            <p>Email: <a href='mailto:gabrie.ares93@gmail.com'>gabriel.ares93@gmail.com</a></p>
-            <p>Portafolio: <a href='https://gabriel6go8d.github.io/curriculum-vitae-2/'>https://gabriel6go8d.github.io/curriculum-vitae-2/</a></p>
-            <p>This Project Code: <a href='https://github.com/Gabriel6go8d/canvas-training'>https://github.com/Gabriel6go8d/canvas-training</a></p>
+
+            <h4>Author: Gabriel Gutierrez</h4>
+            <a href='mailto:gabriel.ares93@gmail.com' className='contact_link'>
+                <div>
+                    <FaEnvelope size='25px' color='white'/>
+                    <p>Email: </p>
+                </div>
+                <p>gabriel.ares93@gmail.com</p>
+            </a>
+
+            <a href='https://gabriel6go8d.github.io/curriculum-vitae-2/' className='contact_link'>
+                <div>
+                    <BsBriefcaseFill size='25px' color='white'/>
+                    <p>Portfolio: </p>
+                </div>
+                <p>https://gabriel6go8d.github.io/curriculum-vitae-2/</p>
+            </a>
+            
+            <a href='https://github.com/Gabriel6go8d/canvas-training' className='contact_link'>
+                <div>
+                    <FaCode size='25px' color='white'/>
+                    <p>Project Code: </p>
+                </div>
+                <p>https://github.com/Gabriel6go8d/canvas-training</p>
+            </a>
+            <a href='https://github.com/Gabriel6go8d' className='contact_link'>
+                <div>
+                    <FaGithub size='25px' color='white'/>
+                    <p>GitHub: </p>
+                </div>
+                <p>https://github.com/Gabriel6go8d</p>
+            </a>
 
             <p className='mt-3'>Used Tecnologies: </p>
             <p>HTML5  CSS3  Canvas  Javascript  React  Bootstrap</p>

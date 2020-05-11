@@ -1,5 +1,5 @@
 {
-  "homepage":"https://gabriel6go8d.github.io/canvas-training/",
+  "homepage": "https://gabriel6go8d.github.io/canvas-training/",
   "name": "race-project",
   "version": "0.1.0",
   "private": true,
@@ -37,6 +37,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^2.2.0"
+    "gh-pages": "^2.2.0",
+    "react-icons": "^3.10.0"
   }
 }

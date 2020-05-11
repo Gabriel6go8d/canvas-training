@@ -50,8 +50,32 @@ code {
   color: white;
 }
 
+.contact_link{
+  font-size: 16px;
+  display: flex;    
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+.contact_link p{
+  margin-left: 5px;
+  max-width: 100%;
+  margin-bottom: 0;
+  word-wrap: break-word;
+  line-height: 25px;
+}
+.contact_link div{
+  display: flex;
+}
+.contact_link svg{
+  width: 50px;
+}
+
 @media only screen and (max-width: 800px){
   .footer{
     position: relative;
+  }
+  .contact_link{
+    flex-direction: column;
+    margin-top: 20px;
   }
 }
