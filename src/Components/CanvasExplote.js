@@ -105,12 +105,21 @@ function CanvasExplote(prop) {
             }            
         },16)
 
+        const changeSize = () => {
+            setMyHeight(window.innerHeight*0.6)
+            setMyWidth(window.innerWidth*0.7)
+            console.log('resize')
+        }
+
+        window.addEventListener('resize', changeSize)
+
         return (() => {
+            window.removeEventListener('resize', changeSize)
             clearInterval(interval)
             interval = 0
         })
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    }, [MyWidth, MyHeight])
     
 
     return (

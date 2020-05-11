@@ -1,10 +1,13 @@
-import React, {useEffect, useRef} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 
 function CanvasRain2() {
 
     const sliderRef = useRef(null)
     const sliderBut = useRef(null)
     const sliderIn = useRef(null)
+
+    const [MyHeight, setMyHeight] = useState(window.innerHeight*0.6)
+    const [MyWidth, setMyWidth] = useState(window.innerWidth*0.7)
 
     useEffect(() => {
 
@@ -18,9 +21,6 @@ function CanvasRain2() {
             Rain = sliderIn.current.value
             init()
         })
-
-        const MyHeight = window.innerHeight*0.6
-        const MyWidth = window.innerWidth*0.7
 
         var canvas = document.getElementById('myCanvas3')        
         canvas.height = MyHeight
@@ -118,13 +118,27 @@ function CanvasRain2() {
             }
         }
 
-        setInterval(()=>{            
+        var interval = setInterval(()=>{            
             c.clearRect(0,0,MyWidth,MyHeight)
             for (var i = 0; i < arrayStars.length; i++){
                 arrayStars[i].update()
             }            
         },16)
-    }, [])
+
+        const changeSize = () => {
+            setMyHeight(window.innerHeight*0.6)
+            setMyWidth(window.innerWidth*0.7)
+            console.log('resize')
+        }
+
+        window.addEventListener('resize', changeSize)
+
+        return (() => {
+            window.removeEventListener('resize', changeSize)
+            clearInterval(interval)
+            interval = 0
+        })
+    }, [MyWidth, MyHeight])
 
     return (
         <div className='mt-3'>

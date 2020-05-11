@@ -1,4 +1,4 @@
-import React, {useEffect}  from 'react'
+import React, {useEffect, useState}  from 'react'
 
 function CanvasRunAway(prop) {
 
@@ -17,11 +17,12 @@ function CanvasRunAway(prop) {
 
 
     var fillC = true
+
+    const [MyHeight, setMyHeight] = useState(window.innerHeight*0.6)
+    const [MyWidth, setMyWidth] = useState(window.innerWidth*0.7)
     
 
     useEffect(() => {
-        const MyHeight = window.innerHeight*0.6
-        const MyWidth = window.innerWidth*0.7
 
         var canvas = document.getElementById('myCanvas4')        
         canvas.height = MyHeight
@@ -105,19 +106,28 @@ function CanvasRunAway(prop) {
         }   
 
         init()        
-        var interval4 = setInterval(()=>{            
+        var interval = setInterval(()=>{            
             c.clearRect(0,0,MyWidth,MyHeight)
             for (var i = 0; i < arrayCircle.length-1; i++){
                 arrayCircle[i].Update()
             }            
         },16)
 
+        const changeSize = () => {
+            setMyHeight(window.innerHeight*0.6)
+            setMyWidth(window.innerWidth*0.7)
+            console.log('resize')
+        }
+
+        window.addEventListener('resize', changeSize)
+
         return (() => {
-            clearInterval(interval4)
-            interval4 = 0
+            window.removeEventListener('resize', changeSize)
+            clearInterval(interval)
+            interval = 0
         })
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    }, [MyWidth, MyHeight])
     
 
     return (
