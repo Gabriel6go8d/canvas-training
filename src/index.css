@@ -12,6 +12,12 @@ code {
     monospace;
 }
 
+.app-content{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .canvasStyle{
   background-color: #f3f6f4;
   border: 2px solid black;
@@ -26,20 +32,26 @@ code {
 }
 
 .footer{
-  position: absolute;
-  bottom: 0;
+  margin-top: auto;
+  background-color: #343A40;
 }
+
 .App p{
   margin: 0;
-}
-@media only screen and (max-width: 800px){
-  .footer{
-    position: relative;
-  }
 }
 
 .warning_text{
   color: yellow;
   margin-bottom: 0;
   align-self: end;
+}
+
+.about{
+  color: white;
+}
+
+@media only screen and (max-width: 800px){
+  .footer{
+    position: relative;
+  }
 }

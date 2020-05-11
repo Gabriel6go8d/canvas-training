@@ -1,13 +1,9 @@
 import React from 'react'
 
 function Footer() {
-    const footstyle = {
-        backgroundColor: '#343A40'
-    }
-
 
     return (
-        <div className='container-fluid mt-5 footer' style={footstyle}>
+        <div className='container-fluid footer'>
             <div className='row justify-content-around text-center text-white align-items-center'>
                 <div className='col-5 mt-3 mb-3'>
                     <h4>Canvas and React Practice</h4>

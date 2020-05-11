@@ -2,7 +2,7 @@ import React from 'react'
 
 function About() {
     return (
-        <div className='container text-white text-left mt-5'>
+        <div className='container text-left mt-5 about'>
             <h4>Canvas Project</h4>
             <p>Author: Gabriel Gutierrez</p>
             <p>Email: <a href='mailto:gabrie.ares93@gmail.com'>gabriel.ares93@gmail.com</a></p>
