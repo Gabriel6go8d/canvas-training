@@ -19,8 +19,8 @@ function CanvasRain2() {
             init()
         })
 
-        let MyHeight = window.innerHeight*0.6
-        let MyWidth = window.innerWidth*0.7
+        const MyHeight = window.innerHeight*0.6
+        const MyWidth = window.innerWidth*0.7
 
         var canvas = document.getElementById('myCanvas3')        
         canvas.height = MyHeight
