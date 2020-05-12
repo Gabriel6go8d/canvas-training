@@ -45,7 +45,7 @@ function About() {
             <p className='mt-3'>Used Tecnologies: </p>
             <p>HTML5  CSS3  Canvas  Javascript  React  Bootstrap</p>
             <p className='mt-3'>What I Learn?</p>
-            <p>This was a really fun project, playing with features of canvas and the math was a little challenge. Also it worked as practice for Bootstrap and React Hooks (useState and useEffect).</p>
+            <p>This was a really fun project, working with the features of canvas while creating interesting animations, also the math was a little challenge. Plus that, it worked as practice for Bootstrap and React Hooks (useState, useEffect, useRef) and I learned how to use the React-Icons´s library.</p>
         </div>
     )
 }
